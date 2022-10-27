@@ -1,0 +1,3 @@
+- name: Install Packages
+  pacman:
+    name = ['git', 'tmux', 'bat', 'cava', 'htop', 'kitty', 'lf', 'neofetch']

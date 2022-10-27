@@ -1,0 +1,10 @@
+- hosts: localhost
+  become: true
+  pre_tasks:
+  - name: Update cache & Upgrade
+    pacman:
+      update_cache: yes
+      upgrade: yes
+  tasks:
+    - include: tasks/zsh.yml
+    - include: tasks/dotfiles.yml

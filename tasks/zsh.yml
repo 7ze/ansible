@@ -1,0 +1,7 @@
+- name: Install zsh & starship
+  pacman:
+    name = ['zsh', 'starship']
+  tags: ['zsh', 'starship']
+
+- name: Set zsh as the default shell
+  shell: chsh -s `which zsh`
