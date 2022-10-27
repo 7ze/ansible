@@ -1,4 +1,4 @@
-- name: Install zsh & starship
+- name: Install zsh, starship
   pacman:
     name = ['zsh', 'starship']
   tags: ['zsh', 'starship']

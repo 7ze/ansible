@@ -9,6 +9,6 @@
       update_cache: yes
       upgrade: yes
   tasks:
-    - include: tasks/ssh.yml
-    - include: tasks/zsh.yml
-    - include: tasks/dotfiles.yml
+    - import_tasks: tasks/ssh.yml
+    - import_tasks: tasks/zsh.yml
+    - import_tasks: tasks/dotfiles.yml
