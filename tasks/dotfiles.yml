@@ -1,7 +1,7 @@
 - name: Installing stow
   pacman: 
-    name = stow
-    state = present
+    name: stow
+    state: present
   tags: ['install', 'dotfiles', 'stow']
 
 - name: cloning dotfiles

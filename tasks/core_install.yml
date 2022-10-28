@@ -1,4 +1,4 @@
 - name: Install Packages
   pacman:
-    name = ['git', 'tmux', 'bat', 'cava', 'htop', 'kitty', 'lf', 'neofetch']
-    state = present
+    name: ['git', 'tmux', 'bat', 'cava', 'htop', 'kitty', 'lf', 'neofetch']
+    state: present
