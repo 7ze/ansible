@@ -2,6 +2,7 @@
   pacman: 
     name: stow
     state: present
+  become: true
   tags: ['install', 'dotfiles', 'stow']
 
 - name: cloning dotfiles
@@ -10,6 +11,7 @@
     dest: "{{ lookup('env', 'HOME') }}/dotfiles"
     recursive: yes
     update: yes
+    accept_hostkey: yes
   tags: ['install', 'dotfiles', 'stow']
 
 - name: stow dotfiles

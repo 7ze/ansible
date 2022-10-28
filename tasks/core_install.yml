@@ -1,4 +1,6 @@
 - name: Install Packages
   pacman:
-    name: ['git', 'tmux', 'bat', 'cava', 'htop', 'kitty', 'lf', 'neofetch']
+    name: ['git', 'tmux', 'bat', 'htop', 'kitty', 'lf', 'neofetch', 'exa']
     state: present
+  become: true
+  tags: ['install']

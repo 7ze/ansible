@@ -2,13 +2,13 @@
   vars:
     source_key: "./.ssh/id_ed25519"
     dest_key: "{{ lookup('env', 'HOME') }}/.ssh/id_ed25519"
-  become: true
   pre_tasks:
   - name: Update cache & Upgrade
     pacman:
       update_cache: yes
       upgrade: yes
+    become: true
   tasks:
-    - import_tasks: tasks/ssh.yml
     - import_tasks: tasks/zsh.yml
+    - import_tasks: tasks/core_install.yml
     - import_tasks: tasks/dotfiles.yml

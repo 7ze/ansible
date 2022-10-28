@@ -3,6 +3,9 @@
     name: ['zsh', 'starship']
     state: present
   tags: ['zsh', 'starship']
+  become: true
 
 - name: Set zsh as the default shell
-  shell: chsh -s `which zsh`
+  shell: chsh -s $(which zsh) zeus
+  tags: ['zsh', 'starship']
+  become: true
