@@ -11,9 +11,10 @@ ARG TAGS
 RUN groupadd zeus --gid 1000
 RUN useradd -m --gid 1000 -G wheel -s /bin/zsh zeus
 RUN echo "zeus:archie" | chpasswd
+RUN echo "%wheel ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 USER zeus
 WORKDIR /home/zeus/
 
 FROM zeus
-COPY . .
-CMD ["sh", "-c", "ansible-playbook $TAGS local.yml"]
+COPY . ./ansible
+CMD ["sh", "-c", "ansible-playbook $TAGS ansible/local.yml"]

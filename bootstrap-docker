@@ -1,0 +1,5 @@
+#!/bin/sh
+
+docker build . -t new-computer
+docker system prune
+docker run --name zeus -it new-computer zsh
